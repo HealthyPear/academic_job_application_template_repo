@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.12
+  - pip
+  - bibtexparser=2.0.0
+  - pyyaml=6.0.3
+  - go-yq
+  - pip:
+      - rendercv[full]==2.8
