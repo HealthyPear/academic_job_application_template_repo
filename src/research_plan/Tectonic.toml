@@ -1,0 +1,12 @@
+[doc]
+name = "research_plan"
+bundle = "https://data1b.fullyjustified.net/tlextras-2022.0r0.tar"
+
+[[output]]
+name = "research_plan_FOOBAR"
+type = "pdf"
+inputs = [
+    "_preamble.tex",
+    "index.tex",
+    "_postamble.tex",
+]
