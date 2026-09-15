@@ -1,0 +1,6 @@
+cv:
+    sections:
+        Selected publications:
+            file: src/CV/bib_selected.yml
+        All publications:
+            file: src/CV/bib_all.yml
