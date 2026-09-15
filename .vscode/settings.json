@@ -1,0 +1,22 @@
+{
+    "files.autoSave": "off",
+    "files.autoSaveDelay": 10,
+    "editor.formatOnSave": true,
+    "python.useEnvironmentsExtension": false,
+    "triggerTaskOnSave.tasks": {
+        "Snakemake: build": [
+            "Snakefile",
+            "src/CV/bibs/**",
+            "src/CV/scripts/test_bib2rendercv.py",
+            "src/CV/configs/template.yaml",
+            "src/CV/configs/cv.yaml",
+            "src/CV/configs/design.yaml",
+            "src/CV/configs/locale.yml",
+            "src/motivation_letter/Tectonic.toml",
+            "src/motivation_letter/src/**",
+            "src/research_plan/Tectonic.toml",
+            "src/research_plan/src/**",
+            "envs/**"
+        ]
+    }
+}

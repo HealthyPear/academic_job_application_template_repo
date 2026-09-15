@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "redhat.vscode-yaml",
+        "wytheglobal.pdfmore",
+        "snakemake.snakemake-lang",
+        "tfehlmann.snakefmt",
+        "gruntfuggly.triggertaskonsave"
+    ]
+}

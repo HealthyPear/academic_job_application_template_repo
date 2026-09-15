@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Snakemake: build",
+            "type": "shell",
+            "command": "conda run --no-capture-output -n dev snakemake --use-conda -c 3",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Snakemake: clean outputs",
+            "type": "shell",
+            "command": "find build src/CV/rendercv_output src/motivation_letter/build src/research_plan/build -type f -exec chmod u+w {} + 2>/dev/null; find src/CV -maxdepth 1 -type f \\( -name 'bib_*.yml' -o -name 'config.yml' \\) -exec chmod u+w {} + 2>/dev/null; conda run --no-capture-output -n dev snakemake --use-conda -c 3 --delete-all-output",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
