@@ -1,0 +1,8 @@
+build
+src/research_plan/build
+src/motivation_letter/build
+src/CV/rendercv_output
+src/CV/*.yml
+.snakemake
+.mypy_cache
+.DS_Store
