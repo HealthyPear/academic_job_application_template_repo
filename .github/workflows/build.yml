@@ -1,0 +1,35 @@
+name: Build application PDFs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: dev
+          environment-file: envs/devcontainer.yaml
+          miniforge-version: latest
+          auto-activate-base: false
+
+      - name: Build documents
+        shell: bash -el {0}
+        run: snakemake --use-conda -c 3
+
+      - name: Upload PDFs
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-pdfs
+          path: build/*.pdf
+          if-no-files-found: error
