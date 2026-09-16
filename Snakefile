@@ -76,11 +76,11 @@ rule make_research_plan:
 rule copy_final_build:
     default_target: True
     input:
-        "src/CV/rendercv_output/FOO_BAR_CV.pdf",
+        "src/CV/rendercv_output/foo_bar_CV.pdf",
         rules.make_motivation_letter.output,
         rules.make_research_plan.output,
     output:
-        "build/FOO_BAR_CV.pdf",
+        "build/foo_bar_CV.pdf",
         "build/motivation_letter_FOOBAR.pdf",
         "build/research_plan_FOOBAR.pdf",
     shell:
