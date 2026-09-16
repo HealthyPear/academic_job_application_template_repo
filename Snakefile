@@ -38,7 +38,7 @@ rule make_CV:
         locale="src/CV/configs/locale.yml",
     output:
         directory("src/CV/rendercv_output"),
-        "src/CV/rendercv_output/FOO_BAR_CV.pdf",
+        "src/CV/rendercv_output/foo_bar_CV.pdf",
     conda:
         "envs/rendercv.yaml"
     shell:
